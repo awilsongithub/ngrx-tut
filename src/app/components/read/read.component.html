@@ -1,0 +1,11 @@
+<div class="right" *ngIf="tutorials">
+	<h1>Tutorials</h1>
+	<ul>
+		<li *ngFor="let tutorial of tutorials | async">
+			<a [href]="tutorial.url" target="_blank">
+				{{tutorial.name }}
+			</a>
+			<button type="button" class="aw-ml-2" (click)="removeTutorial(tutorial)">Delete</button>
+		</li>
+	</ul>
+</div>
